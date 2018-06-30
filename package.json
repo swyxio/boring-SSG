@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "babel-preset-react-app": "^3.1.2",
+    "babel-register": "^6.26.0",
+    "ignore-styles": "^5.0.1",
+    "import-export": "^1.0.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "name": "boringssgtest",
+  "version": "0.0.1",
+  "description": "a test to make a static sitegen",
+  "main": "index.js",
+  "devDependencies": {
+    "react-scripts": "^1.1.4"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development node ./test1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sw-yx/boring-SSG.git"
+  },
+  "keywords": [
+    "react",
+    "static",
+    "site",
+    "gen"
+  ],
+  "author": "“swyx\" <“swyx@some.email”> (“http://swyx.io\")",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sw-yx/boring-SSG/issues"
+  },
+  "homepage": "https://github.com/sw-yx/boring-SSG#readme"
+}
