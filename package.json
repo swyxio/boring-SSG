@@ -4,6 +4,7 @@
     "babel-register": "^6.26.0",
     "ignore-styles": "^5.0.1",
     "import-export": "^1.0.1",
+    "parcel-bundler": "^1.9.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
@@ -15,7 +16,7 @@
     "react-scripts": "^1.1.4"
   },
   "scripts": {
-    "start": "NODE_ENV=development node ./test1"
+    "start": "NODE_ENV=development nodemon ./test1 --ignore dist/ --ignore .cache/"
   },
   "repository": {
     "type": "git",

@@ -1,11 +1,17 @@
 require('ignore-styles');
-const babelRegister = require('babel-register');
+// const babelRegister = require('babel-register');
 
-babelRegister({
-  ignore: /\/(build|node_modules)\//,
-  presets: ['react-app'],
+// babelRegister({
+//   ignore: /\/(build|node_modules)\//,
+//   presets: ['react-app'],
+// });
+require('babel-register')({
+  presets: ['env', 'react-app'],
 });
 
 const fs = require('fs');
 
-fs.writeFileSync('output.html', require('./render').default);
+// write it out
+require('./render')
+  .default()
+  .then(res => fs.writeFileSync('output.html', res));
