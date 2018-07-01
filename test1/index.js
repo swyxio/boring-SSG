@@ -23,4 +23,4 @@ const fs = require('fs');
 // write it out
 require('./render')
   .default()
-  .then(res => fs.writeFileSync('index.html', res));
+  .then(res => fs.writeFileSync('dist/index.html', res));
