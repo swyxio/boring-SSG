@@ -1,12 +1,11 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { ServerLocation } from '@reach/router';
-// import { DIR, HYDRATE } from './constants';
 const fs = require('fs');
 import BoringShell from './BoringShell';
 
+// should return html string to be written into the path
 export async function SSR(path) {
-  // should return html string to be written into the path
   let assets;
   if (process.env.NODE_ENV === 'development') {
     assets = {

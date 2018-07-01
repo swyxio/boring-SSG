@@ -24,7 +24,25 @@ Making the right tradeoff of developer ergonomics and flexibility is a very diff
 
 ## Under the Hood
 
+A key design consideration for me was to have a rehydrated static site, not just a simple static site. This raised the difficulty but I consider it mandatory in the modern JAMstack era.
+
+I iterated through a couple of approaches before landing on the current method. I originally tried to generate a custom bundle for every generated page, but that proved extremely verbose and probably inadvisable for scaling.
+
+There was another attempt I made at hooking into Parcel's [internal Event system](https://parceljs.org/api.html#events), but frankly they aren't well documented and didn't even seem to work at all. This would have been much nicer to hook into for page generation _even without a whitelist_, which is a very interesting goal, but could also be important for fast multi-asset bundling (incl code split by default). This is probably something to return to when Parcel v2 is out.
+
+The current method is much simpler. Essentially the site generation process is fast because the SSR'ed pages **and** the bundle can be run in parallel. Because all we need to know from the bundle to inject into the page is the name of the bundle, the simplistic approach we have now (doesn't include multiple assets) is sufficient to generate the pages even before the bundler is done.
+
+The rehydration is achieved by having a single app shell, called the "BoringShell", which hydrates the HTML if on clientside, but otherwise is just a thin shell around the actual App defined in `/src`. The accompanying `Chrome` React component handles the HTML meta tags and the asset injection based on its `assets` prop. (more work to do here to handle multiple assets)
+
+Routing is done by [simulating the route](https://reach.tech/router/server-rendering) based on the `config`'s whitelist. This makes rehydration very straightforward.
+
+---
+
 # Todo
 
 - [ ] Work out CSS/multiple asset bundling
-- [ ]
+- [ ] Demonstrate data injection model (may require creating addtional library level components)
+
+# Prototype Goal
+
+Currently this is just a "breakable toy" to do R&D for https://github.com/sw-yx/create-jamstack-app, which is the actual CLI based SSG that has the infrastructure to support a more maintainable and fast versino of `boring-SSG`.

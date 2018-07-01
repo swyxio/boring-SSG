@@ -17,11 +17,6 @@ export default function Chrome({ assets = {}, title, children }) {
           }}
         />
         {children}
-        {/* <script
-          dangerouslySetInnerHTML={{
-            __html: `assetManifest = ${JSON.stringify(assets)};`,
-          }}
-        /> */}
         <script src={assets['main.js']} />
       </body>
     </html>
