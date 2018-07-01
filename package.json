@@ -5,6 +5,8 @@
     "@babel/preset-react": "^7.0.0-beta.51",
     "@babel/register": "^7.0.0-beta.51",
     "@reach/router": "^1.1.1",
+    "axios": "^0.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
     "ignore-styles": "^5.0.1",
     "import-export": "^1.0.1",
@@ -21,7 +23,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=development nodemon ./test1 --ignore dist/ --ignore .cache/",
-    "startb": "NODE_ENV=development babel-node ./test1",
+    "startb": "NODE_ENV=development babel-node ./test1/index.js",
     "parcel": "parcel src/index.html"
   },
   "repository": {

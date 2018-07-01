@@ -3,3 +3,4 @@ yarn.lock
 .cache
 dist
 .DS_Store
+.boring
