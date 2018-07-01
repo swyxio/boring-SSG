@@ -1,19 +1,29 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Link } from '@reach/router';
 
 // Your top level component
-import App from './App'
+import Home from './pages/Home';
+import About from './pages/About';
+import Blog from './pages/Blog';
+import Oops from './pages/404';
 
-// Export your top level component as JSX (for static rendering)
-export default App
+const App = () => (
+  <div>
+    <nav>
+      <Link to="/">Home </Link>
+      <Link to="about">About </Link>
+      <Link to="blog">Refresh </Link>
+    </nav>
+    <div className="content">
+      <Router>
+        <Home path="/" />
+        <About path="/about" />
+        <Blog path="/blog" />
+        <Oops default />
+      </Router>
+    </div>
+  </div>
+);
 
-// Render your app
-if (typeof document !== 'undefined') {
-  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
-  const render = Comp => {
-    renderMethod(<Comp />, document.getElementById('root'))
-  }
-
-  // Render!
-  render(App)
-}
+export default App;

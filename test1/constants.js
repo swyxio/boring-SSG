@@ -1,2 +1,2 @@
 export const DIR = 'dist';
-export const HYDRATE = '.boring';
+// export const HYDRATE = '.boring';

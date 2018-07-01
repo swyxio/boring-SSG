@@ -8,16 +8,14 @@ export default {
     // const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts');
     return [
       {
-        path: '/',
-        component: 'src/pages/Home'
+        path: '/'
       },
       {
-        path: '/about',
-        component: 'src/pages/About'
+        path: '/about'
       },
       {
-        path: '/blog',
-        component: 'src/pages/Blog'
+        path: '/blog'
+        // component: 'src/pages/Blog'
         // getData: () => ({
         //   posts
         // }),
@@ -28,11 +26,11 @@ export default {
         //     post
         //   })
         // }))
-      },
-      {
-        is404: true,
-        component: 'src/pages/404'
       }
+      // {
+      //   is404: true,
+      //   component: 'src/pages/404'
+      // }
     ];
   }
 };
