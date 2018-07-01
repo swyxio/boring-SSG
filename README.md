@@ -8,13 +8,14 @@ hello! This is an experimental react static site generator using Parcel and @rea
 2.  `cd boring-SSG`
 3.  `yarn` (or `npm install`)
 4.  `yarn start`, this should build your pages into the `/dist` folder.
-5.  (optional) in another process, `yarn server` to spin up a small server to see your static pages in <https://localhost:5000>
+5.  (optional) in another process, `yarn serve` to spin up a small server to see your static pages in <https://localhost:5000>
 
 Things to notice:
 
 - Site works with Javascript off
 - After the initial load, the app rehydrates and all routing is clientside (including dynamic routes)
 - If you refresh on any page, the server serves that page's HTML and rehydrates from there, it doesn't simply serve `index.html` and navigates you back.
+- for invalid URLs, 404 page is served.
 
 # Usage
 
@@ -48,6 +49,7 @@ Routing is done by [simulating the route](https://reach.tech/router/server-rende
 
 - [ ] Work out CSS/multiple asset bundling
 - [ ] Demonstrate data injection model (may require creating addtional library level components)
+- [ ] Test production build
 
 # Prototype Goal
 
