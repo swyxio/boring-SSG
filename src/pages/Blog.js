@@ -1,8 +1,4 @@
 import React from 'react';
-// import { withRouteData, Link } from 'react-static'
-//
-
-// export default withRouteData(({ posts }) => (
 export default ({ posts }) => (
   <div>
     <h1>Persists even if you Reload.</h1>
