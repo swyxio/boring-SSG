@@ -26,7 +26,8 @@
     "startb": "NODE_ENV=development nodemon ./test1 --ignore dist/ --ignore .cache/",
     "start": "npm run clearcache && NODE_ENV=development babel-node ./test1/index.js ",
     "parcel": "parcel src/index.html",
-    "clearcache": "rimraf dist"
+    "clearcache": "rimraf dist",
+    "serve": "nodemon server"
   },
   "repository": {
     "type": "git",
