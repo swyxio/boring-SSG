@@ -5,12 +5,13 @@ import { ServerLocation } from '@reach/router';
 
 // import App from '../src/components/App';
 import BoringApp from './JSX/BoringApp';
+import BoringHydrate from './JSX/BoringHydrate';
 
 const Bundler = require('parcel-bundler');
 const Path = require('path');
 const file = Path.join(__dirname, '../src/pages/index.js');
 const App = BoringApp(file);
-const bundler = new Bundler(file);
+const bundler = new Bundler(BoringHydrate(file));
 
 export default async function render() {
   const bundle = await bundler.bundle();
