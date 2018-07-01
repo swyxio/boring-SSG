@@ -3,23 +3,24 @@ import { renderToString } from 'react-dom/server';
 
 import { ServerLocation } from '@reach/router';
 
-import App from '../src/components/App';
+// import App from '../src/components/App';
+import BoringApp from './JSX/BoringApp';
 
 const Bundler = require('parcel-bundler');
 const Path = require('path');
-const file = Path.join(__dirname, '../src/index.js');
+const file = Path.join(__dirname, '../src/pages/index.js');
+const App = BoringApp(file);
 const bundler = new Bundler(file);
 
 export default async function render() {
   const bundle = await bundler.bundle();
   // console.log({ bundle: [...bundle.childBundles][0] });
-
   let assets;
   if (process.env.NODE_ENV === 'development') {
     const bundledPath = stripPath(bundle.name);
     console.log({ bundle });
-    // const bundledPath = [...bundle.childBundles][0].name.replace(Path.resolve(__dirname, '../'), '');
-    // console.log({ bundledPath, __dirname: Path.resolve(__dirname, '../') });
+    console.log(bundle.name);
+    console.log(Object.keys(bundle));
     // let count = 0;
     // for (let x of [...bundle.childBundles]) {
     //   // if (!x.name.includes('node_modules')) {

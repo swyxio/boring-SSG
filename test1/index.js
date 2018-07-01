@@ -1,4 +1,14 @@
 require('ignore-styles');
+
+const fs = require('fs');
+
+// write it out
+require('./render')
+  .default()
+  .then(res => fs.writeFileSync('dist/index.html', res));
+
+// junk
+
 // const babelRegister = require('babel-register');
 
 // babelRegister({
@@ -17,10 +27,3 @@ require('ignore-styles');
 //     'react-app' // babel 7 Error: Plugin/Preset files are not allowed to export objects, only functions.
 //   ]
 // });
-
-const fs = require('fs');
-
-// write it out
-require('./render')
-  .default()
-  .then(res => fs.writeFileSync('dist/index.html', res));
