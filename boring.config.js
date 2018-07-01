@@ -9,21 +9,21 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/containers/Home'
+        component: 'src/pages/Home'
       },
       {
         path: '/about',
-        component: 'src/containers/About'
+        component: 'src/pages/About'
       },
       {
         path: '/blog',
-        component: 'src/containers/Blog'
+        component: 'src/pages/Blog'
         // getData: () => ({
         //   posts
         // }),
         // children: posts.map(post => ({
         //   path: `/post/${post.id}`,
-        //   component: 'src/containers/Post',
+        //   component: 'src/pages/Post',
         //   getData: () => ({
         //     post
         //   })
@@ -31,7 +31,7 @@ export default {
       },
       {
         is404: true,
-        component: 'src/containers/404'
+        component: 'src/pages/404'
       }
     ];
   }
