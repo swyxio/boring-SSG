@@ -1,6 +1,8 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 
+import { ServerLocation } from '@reach/router';
+
 import App from '../src/components/App';
 
 const Bundler = require('parcel-bundler');
@@ -14,21 +16,21 @@ export default async function render() {
 
   let assets;
   if (process.env.NODE_ENV === 'development') {
-    // Use the bundle from create-react-app's server in development mode
-    const bundledPath = [...bundle.childBundles][0].name.replace(
-      Path.resolve(__dirname, '../'),
-      '',
-    );
+    const bundledPath = [...bundle.childBundles][0].name.replace(Path.resolve(__dirname, '../'), '');
     console.log({ bundledPath, __dirname: Path.resolve(__dirname, '../') });
     assets = {
       'main.js': bundledPath,
-      'main.css': '',
+      'main.css': ''
     };
   } else {
     assets = require('../build/asset-manifest.json');
   }
 
-  var html = renderToString(<App assets={assets} />);
+  var html = renderToString(
+    <ServerLocation url={'/'}>
+      <App assets={assets} />
+    </ServerLocation>
+  );
   // There's no way to render a doctype in React so prepend manually.
   // Also append a bootstrap script tag.
   return '<!DOCTYPE html>' + html;

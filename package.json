@@ -1,7 +1,11 @@
 {
   "dependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "@babel/register": "^7.0.0-beta.51",
+    "@reach/router": "^1.1.1",
     "babel-preset-react-app": "^3.1.2",
-    "babel-register": "^6.26.0",
     "ignore-styles": "^5.0.1",
     "import-export": "^1.0.1",
     "parcel-bundler": "^1.9.3",
@@ -16,7 +20,9 @@
     "react-scripts": "^1.1.4"
   },
   "scripts": {
-    "start": "NODE_ENV=development nodemon ./test1 --ignore dist/ --ignore .cache/"
+    "start": "NODE_ENV=development nodemon ./test1 --ignore dist/ --ignore .cache/",
+    "startb": "NODE_ENV=development babel-node ./test1",
+    "parcel": "parcel src/index.html"
   },
   "repository": {
     "type": "git",

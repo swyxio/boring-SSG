@@ -5,13 +5,22 @@ require('ignore-styles');
 //   ignore: /\/(build|node_modules)\//,
 //   presets: ['react-app'],
 // });
-require('babel-register')({
-  presets: ['env', 'react-app'],
-});
+// require('@babel/register')({
+//   presets: [
+//     'env', // babel 7 TypeError: Cannot read property 'bindings' of null // scope.bindings[name] = info;
+//     // ["@babel/env", {
+//     //   "targets": {
+//     //     "browsers": ["last 2 versions"]
+//     //   }
+//     // }],
+//     // '@babel/react'
+//     'react-app' // babel 7 Error: Plugin/Preset files are not allowed to export objects, only functions.
+//   ]
+// });
 
 const fs = require('fs');
 
 // write it out
 require('./render')
   .default()
-  .then(res => fs.writeFileSync('output.html', res));
+  .then(res => fs.writeFileSync('index.html', res));

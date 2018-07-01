@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
       <Chrome title="Hello World" assets={this.props.assets}>
         <div>
-          <h1>Hello World</h1>
+          {/* <h1>Hello World</h1> */}
           <Page />
         </div>
       </Chrome>
