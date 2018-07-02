@@ -1,7 +1,7 @@
 import React from 'react';
-
+import Safe from 'react-safe';
 // everything here only exists for SSR purpose
-
+// json loading https://quipblog.com/efficiently-loading-inlined-json-data-911960b0ac0a
 export default function Chrome({ assets = {}, title, children }) {
   return (
     <html lang="en">
@@ -19,12 +19,15 @@ export default function Chrome({ assets = {}, title, children }) {
           }}
         />
         {children}
+        {/* {assets['BigBall'] && <Safe.script type="application/json">{JSON.stringify(assets['BigBall'])}</Safe.script>} */}
+        {/* <Safe.script suppressHydrationWarning={true}>
+          const jsonNode = document.querySelector( "script[type='application/json']"); const jsonText
+          =jsonNode.textContent; const jsonData = JSON.parse(jsonText); window.BigBall = jsonData
+        </Safe.script> */}
+        <Safe.script suppressHydrationWarning={true}>
+          {`fetch("/BigBall.json").then(res => res.json()).then(myJson => (window.BigBall=myJson));`}
+        </Safe.script>
         <script src={assets['main.js']} suppressHydrationWarning={true} />
-        {assets.routeInfo &&
-          <script type="text/javascript">
-            window.__routeInfo = {JSON.stringify(assets.routeInfo)}
-          </script>
-        }
       </body>
     </html>
   );

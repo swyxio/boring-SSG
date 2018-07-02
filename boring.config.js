@@ -1,13 +1,16 @@
-import getMarkdown from './Boring/MDPlugin'
+import getMarkdown from './Boring/MDPlugin';
 
 export default {
+  getData: async () => {
+    const posts = await getMarkdown('./src/pages/blog');
+    return {
+      posts
+    };
+  },
   getRoutes: async () => {
-    const posts = await getMarkdown('./src/pages/blog')
-    // console.log({posts})
     return [
       {
-        path: '/',
-        getData: () => ({posts}),
+        path: '/'
       },
       {
         path: '/about'

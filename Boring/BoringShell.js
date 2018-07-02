@@ -8,7 +8,7 @@ export default function BoringShell(props) {
   const { title, assets = {}, children } = props;
   return (
     <Chrome title={title} assets={assets}>
-      <App>{children}</App>
+      <App data={assets.BigBall}>{children}</App>
     </Chrome>
   );
 }

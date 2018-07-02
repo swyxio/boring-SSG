@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from '@reach/router';
-import { RouteData } from '../../Boring/withRouteData';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -13,31 +12,26 @@ export default class IndexPage extends React.Component {
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
           </div>
-          <RouteData>
-            {value => {
-              console.log({ value });
-              const { posts } = value;
-              return posts.map(post => (
-                <div className="content" style={{ border: '1px solid #eaecee', padding: '2em 4em' }} key={post.id}>
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
-              ));
-            }}
-          </RouteData>
+          {/* {JSON.stringify(posts)} */}
+          {posts.map(({ content, data = {}, excerpt }, i) => (
+            <div className="content" style={{ border: '1px solid #eaecee', padding: '2em 4em' }} key={i}>
+              <p>
+                <Link className="has-text-primary" to={data.slug}>
+                  {data.title}
+                </Link>
+                <span> &bull; </span>
+                <small>{new Date(data.date).toLocaleString('en-US')}</small>
+              </p>
+              <p>
+                {excerpt}
+                <br />
+                <br />
+                <Link className="button is-small" to={data.slug}>
+                  Keep Reading →
+                </Link>
+              </p>
+            </div>
+          ))}
         </div>
       </section>
     );
