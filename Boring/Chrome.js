@@ -1,5 +1,7 @@
 import React from 'react';
 
+// everything here only exists for SSR purpose
+
 export default function Chrome({ assets = {}, title, children }) {
   return (
     <html lang="en">
@@ -18,6 +20,11 @@ export default function Chrome({ assets = {}, title, children }) {
         />
         {children}
         <script src={assets['main.js']} suppressHydrationWarning={true} />
+        {assets.routeInfo &&
+          <script type="text/javascript">
+            window.__routeInfo = {JSON.stringify(assets.routeInfo)}
+          </script>
+        }
       </body>
     </html>
   );

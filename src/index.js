@@ -8,6 +8,8 @@ import About from './templates/about-page';
 // import Blog from './pages/Blog';
 import Oops from './pages/404';
 
+import './app.css'
+
 const posts = [
   {id: 1,
     fields: { slug: 'post1' },
