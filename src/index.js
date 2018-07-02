@@ -15,8 +15,15 @@ const App = ({ data }) => {
   if (!data && typeof window !== 'undefined') {
     data = window.BigBall; // TODO: i know this is so ugly. would love to refactor.
     console.log('fromwindow', { data });
+  } else if (typeof window !== 'undefined') {
+    if (!data & !window.BigBallReload) {
+      window.BigBallReload = true
+      fetch("/BigBall.json")
+        .then(res => res.json())
+        .then(myJson => (window.BigBall = myJson))
+      return <Oops /> // no data, show an oops
+    }
   }
-  if (!data) return <Oops /> // no data, show an oops
   return (
     <Router>
       <IndexPage path="/" posts={data.posts} />

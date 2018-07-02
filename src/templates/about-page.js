@@ -14,7 +14,7 @@ export const AboutPage = ({ content, data }) => {
               <div className="section">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">{data.title}</h2>
                 {/* <PageContent className="content" content={content} /> */}
-                <ReactMarkdown source={content} />
+                <ReactMarkdown className="content" source={content} />
               </div>
             </div>
           </div>

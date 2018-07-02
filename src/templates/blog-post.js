@@ -27,7 +27,7 @@ const BlogPostCore = ({
                 {title}
               </h1>
               <p>{description}</p>
-              <ReactMarkdown source={content} />
+              <ReactMarkdown className="content" source={content} />
               {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
