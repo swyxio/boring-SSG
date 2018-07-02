@@ -72,8 +72,9 @@ Routing is done by [simulating the route](https://reach.tech/router/server-rende
 # Todo
 
 - [ ] Work out CSS/multiple asset bundling
-- [ ] Demonstrate data injection model (may require creating addtional library level components)
+- [ ] Demonstrate split data injection model (may require creating addtional library level components)
 - [ ] Test production build
+- [ ] Inline css
 
 # Prototype Goal
 

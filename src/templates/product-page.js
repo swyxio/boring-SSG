@@ -4,7 +4,7 @@ import Testimonials from '../components/Testimonials';
 import Pricing from '../components/Pricing';
 
 import Layout from '../layouts';
-export const ProductPage = ({ image, title, heading, description, intro, main, testimonials, fullImage, pricing }) => (
+export const ProductPage = ({ image, title, heading, description, intro, main, testimonials, full_image, pricing }) => (
   <Layout>
     <section className="section section--gradient">
       <div className="container">
@@ -60,7 +60,7 @@ export const ProductPage = ({ image, title, heading, description, intro, main, t
                   </div>
                 </div>
                 <Testimonials testimonials={testimonials} />
-                <div className="full-width-image-container" style={{ backgroundImage: `url(${fullImage})` }} />
+                <div className="full-width-image-container" style={{ backgroundImage: `url(${full_image})` }} />
                 <h2 className="has-text-weight-semibold is-size-2">{pricing.heading}</h2>
                 <p className="is-size-5">{pricing.description}</p>
                 <Pricing data={pricing.plans} />

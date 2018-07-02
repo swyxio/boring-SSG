@@ -16,14 +16,14 @@ export default class IndexPage extends React.Component {
             {posts.reverse().map(({ content, data = {}, excerpt }, i) => (
               <div className="content" style={{ border: '1px solid #eaecee', padding: '2em 4em' }} key={i}>
                 <p>
-                  <Link className="has-text-primary" to={'blog/'+ data.slug}>
+                  <Link className="has-text-primary" to={'blog/' + data.slug}>
                     {data.title}
                   </Link>
                   <span> &bull; </span>
                   <small>{new Date(data.date).toLocaleString('en-US')}</small>
                 </p>
                 <p>
-                  {excerpt}
+                  {data.description}
                   <br />
                   <br />
                   <Link className="button is-small" to={data.slug}>
