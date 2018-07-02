@@ -17,7 +17,7 @@ export default function Chrome({ assets = {}, title, children }) {
           }}
         />
         {children}
-        <script src={assets['main.js']} />
+        <script src={assets['main.js']} suppressHydrationWarning={true} />
       </body>
     </html>
   );

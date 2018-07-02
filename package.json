@@ -26,9 +26,8 @@
     "rimraf": "^2.6.2"
   },
   "scripts": {
-    "OLDtestscript": "NODE_ENV=development nodemon ./test1 --ignore dist/ --ignore .cache/",
     "start": "concurrently \"npm run doSSG\"  \"npm run serve\"",
-    "doSSG": "npm run clearcache && NODE_ENV=development babel-node ./test1/index.js ",
+    "doSSG": "npm run clearcache && NODE_ENV=development babel-node ./Boring/index.js ",
     "clearcache": "rimraf dist",
     "serve": "nodemon server"
   },
