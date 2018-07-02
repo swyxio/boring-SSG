@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Content, { HTMLContent } from '../components/Content';
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
@@ -19,12 +18,6 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       </div>
     </section>
   );
-};
-
-AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func
 };
 
 const AboutPage = ({ post }) => {

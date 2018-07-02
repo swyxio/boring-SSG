@@ -16,7 +16,7 @@ const write = filepath => data => console.log(`writing to ${filepath}`) || fs.ou
 
   // go through getRoutes to know what to generate
   config
-    .getRoutes()
+    .getRoutes(BigBall)
     .then(routes => {
       routes.forEach(({ path, ...props }) => {
         const routepath = NodePath.join(DIR, path);

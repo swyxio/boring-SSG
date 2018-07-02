@@ -2,12 +2,14 @@ import getMarkdown from './Boring/MDPlugin';
 
 export default {
   getData: async () => {
-    const posts = await getMarkdown('./src/pages/blog');
     return {
-      posts
+      posts: await getMarkdown('./src/pages/blog'),
+      about: await getMarkdown('./src/pages/about'),
+      products: await getMarkdown('./src/pages/products')
     };
   },
-  getRoutes: async () => {
+  getRoutes: async ({ posts }) => {
+    // SSR the individual blogposts using `posts`
     return [
       {
         path: '/'
@@ -16,7 +18,7 @@ export default {
         path: '/about'
       },
       {
-        path: '/blog'
+        path: '/products'
       }
     ];
   }
