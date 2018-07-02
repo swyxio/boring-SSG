@@ -9,7 +9,7 @@ import Products from './templates/product-page';
 // import Blog from './pages/Blog';
 import Oops from './pages/404';
 
-// import './app.css'
+import './app.css';
 
 const about = {
   fields: { slug: 'post1' },

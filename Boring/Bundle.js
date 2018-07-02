@@ -1,8 +1,8 @@
 import Bundler from 'parcel-bundler';
 const NodePath = require('path');
 
-export async function Bundle() {
-  const path = NodePath.join(__dirname, './BoringShell.js');
+export function Bundle() {
+  const path = NodePath.join(__dirname, '../static/index.html');
   const bundler = new Bundler(path);
-  const bundle = await bundler.bundle().catch(console.error);
+  return bundler.bundle().catch(console.error);
 }

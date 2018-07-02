@@ -10,12 +10,6 @@ ncp.limit = 16;
 const write = filepath => data => console.log(`writing to ${filepath}`) || fs.outputFileSync(filepath, data); // nice pointfree thing for promise
 
 (async () => {
-  Bundle();
-
-  // get big ball of data
-  const BigBall = await config.getData();
-  write(NodePath.join(DIR, '/BigBall.json'))(JSON.stringify(BigBall));
-
   // copy files from static to dist
   ncp('static', DIR, function(err) {
     if (err) {
@@ -23,6 +17,15 @@ const write = filepath => data => console.log(`writing to ${filepath}`) || fs.ou
     }
     console.log('done!');
   });
+
+  // bundle things
+  const bundleresult = await Bundle();
+  var util = require('util');
+  write(NodePath.join(DIR, '/bundleresult.json'))(util.inspect(bundleresult));
+
+  // get big ball of data
+  const BigBall = await config.getData();
+  write(NodePath.join(DIR, '/BigBall.json'))(JSON.stringify(BigBall));
 
   // go through getRoutes to know what to generate
   config
