@@ -1,3 +1,5 @@
 [build]
   command = "yarn run build"
   publish = "dist"
+[build.environment]
+  YARN_VERSION = "1.6.0"
