@@ -13,6 +13,11 @@ app.use(
 );
 app.listen(5000, () => {
   console.log('Listening on port 5000...');
+  var openBrowser = require('react-dev-utils/openBrowser');
+
+  if (openBrowser('http://localhost:5000')) {
+    console.log('Check it out on the browser!');
+  }
 });
 
 app.on('error', function(error) {

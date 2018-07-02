@@ -8,7 +8,6 @@ hello! This is an experimental react static site generator using Parcel and @rea
 2.  `cd boring-SSG`
 3.  `yarn` (or `npm install`)
 4.  `yarn start`, this should build your pages into the `/dist` folder.
-5.  (optional) in another process, `yarn serve` to spin up a small server to see your static pages in <https://localhost:5000>
 
 Things to notice:
 

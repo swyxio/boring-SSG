@@ -19,12 +19,16 @@
   "description": "a test to make a static sitegen",
   "main": "index.js",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "concurrently": "^3.6.0",
+    "nodemon": "^1.17.5",
     "react-scripts": "^1.1.4",
     "rimraf": "^2.6.2"
   },
   "scripts": {
-    "startb": "NODE_ENV=development nodemon ./test1 --ignore dist/ --ignore .cache/",
-    "start": "npm run clearcache && NODE_ENV=development babel-node ./test1/index.js ",
+    "OLDtestscript": "NODE_ENV=development nodemon ./test1 --ignore dist/ --ignore .cache/",
+    "start": "concurrently \"npm run doSSG\"  \"npm run serve\"",
+    "doSSG": "npm run clearcache && NODE_ENV=development babel-node ./test1/index.js ",
     "clearcache": "rimraf dist",
     "serve": "nodemon server"
   },
