@@ -3,17 +3,20 @@ import React from 'react';
 import { Link } from '@reach/router';
 
 // import github from '../img/github-icon.svg';
+import Github from '../img/github-icon.svg';
 // import logo from '../img/logo.svg';
-// import SVGInline from 'react-svg-inline';
+import Logo from '../img/logo.svg';
 
 const Navbar = () => (
   <nav className="navbar is-transparent">
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
-          {/* <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure> */}Kaldi
+          <figure className="image">
+            {/* <img src={logo} alt="Kaldi" style={{ width: '88px' }} /> */}
+            <Logo style={{width: '88px'}}/>
+          </figure>
+          {/* Kaldi */}
         </Link>
       </div>
       <div className="navbar-start">
@@ -33,8 +36,7 @@ const Navbar = () => (
         >
           <span className="icon">
             {/* <img src={github} alt="Github" /> */}
-            {/* <SVGInline svg={github} alt="Github" /> */}
-            github
+            <Github />
           </span>
         </a>
       </div>

@@ -6,6 +6,7 @@
     "transform-class-properties",
     "transform-es2015-classes",
     "transform-object-rest-spread",
-    "css-modules-transform"
+    "css-modules-transform",
+    "inline-react-svg"
   ]
 }
