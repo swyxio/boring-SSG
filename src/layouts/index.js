@@ -1,0 +1,16 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+
+import Navbar from '../components/Navbar';
+// import './all.sass' // todo: add back later
+
+const TemplateWrapper = ({ children }) => (
+  <div>
+    <Helmet title="Home | Boring + Netlify CMS" />
+    <Navbar />
+    <div>{children}</div>
+  </div>
+);
+
+export default TemplateWrapper;
