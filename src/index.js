@@ -31,7 +31,7 @@ class App extends React.Component {
     return (
       <Router>
         <IndexPage path="/" posts={data.posts} />
-        <About path="/about" {...data.about[0]} />
+        <About path="/readme" {...data.about[0]} />
         <Products path="/products" {...data.products[0].data} />
         <Blog path="/blog/:blogkey" posts={data.posts} />
         <Oops default />
