@@ -8,6 +8,12 @@ hello! This is an experimental react static site generator using [Parcel](https:
 
 ![blog](https://user-images.githubusercontent.com/35976578/42151286-7cd6eb5e-7daa-11e8-91b1-1c4b30c157f5.gif)
 
+# Deploy on Netlify with NetlifyCMS
+
+One click deploy on Netlify:
+
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/sw-yx/boring-SSG&stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+
 # Try it out
 
 1.  `git clone https://github.com/sw-yx/boring-SSG.git`
@@ -21,12 +27,6 @@ Things to notice:
 - After the initial load, the app rehydrates and all routing is clientside (including dynamic routes)
 - If you refresh on any page, the server serves that page's HTML and rehydrates from there, it doesn't simply serve `index.html` and navigates you back.
 - for invalid URLs, 404 page is served.
-
-# Deploy on Netlify with NetlifyCMS
-
-One click deploy on Netlify:
-
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/sw-yx/boring-SSG&stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 ---
 
@@ -80,7 +80,7 @@ There was another attempt I made at hooking into Parcel's [internal Event system
 **Performance**: although of course boring-ssg does much less than Gatsby so this is a terrible measurement, I looked into the measured performance for essentially the same tasks (rendering `gatsby-starter-netlify-cms` from Markdown + JSX to JAMstack HTML) takes `boring-ssg` 2-6 seconds (depending on cache) and for Gatsby about 45 seconds, or **about 87% less build time.**
 
 ![image](https://user-images.githubusercontent.com/6764957/42155854-82d1ba86-7db7-11e8-90c8-22c00c731709.png)
-<img width="789" alt="image" src="https://user-images.githubusercontent.com/6764957/42155866-88df3dea-7db7-11e8-858e-10339eb6e1eb.png">
+![image](https://user-images.githubusercontent.com/6764957/42155866-88df3dea-7db7-11e8-858e-10339eb6e1eb.png)
 
 ### The details
 
