@@ -13,11 +13,10 @@ export default class IndexPage extends React.Component {
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
             </div>
-            {/* {JSON.stringify(posts)} */}
-            {posts.map(({ content, data = {}, excerpt }, i) => (
+            {posts.reverse().map(({ content, data = {}, excerpt }, i) => (
               <div className="content" style={{ border: '1px solid #eaecee', padding: '2em 4em' }} key={i}>
                 <p>
-                  <Link className="has-text-primary" to={data.slug}>
+                  <Link className="has-text-primary" to={'blog/'+ data.slug}>
                     {data.title}
                   </Link>
                   <span> &bull; </span>

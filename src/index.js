@@ -5,7 +5,7 @@ import { Router, Link } from '@reach/router';
 import IndexPage from './pages';
 import About from './templates/about-page';
 import Products from './templates/product-page';
-// import Blog from './pages/Blog';
+import Blog from './templates/blog-post';
 import Oops from './pages/404';
 
 import 'bulma/css/bulma.css';
@@ -22,7 +22,7 @@ const App = ({ data }) => {
       <IndexPage path="/" posts={data.posts} />
       <About path="/about" {...data.about[0]} />
       <Products path="/products" {...data.products[0].data} />
-      {/* <Blog path="/blog" /> */}
+      <Blog path="/blog/:blogkey" posts={data.posts} />
       <Oops default />
     </Router>
   );

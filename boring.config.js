@@ -10,6 +10,8 @@ export default {
   },
   getRoutes: async ({ posts }) => {
     // SSR the individual blogposts using `posts`
+    const blogs = posts.map(({data}) => ({path: `/blog/${data.slug}`}))
+
     return [
       {
         path: '/'
@@ -19,7 +21,8 @@ export default {
       },
       {
         path: '/products'
-      }
+      },
+      ...blogs
     ];
   }
 };

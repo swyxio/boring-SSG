@@ -1,5 +1,5 @@
 import React from 'react';
-import Content, { HTMLContent } from '../components/Content';
+// import Content, { HTMLContent } from '../components/Content';
 import ReactMarkdown from 'react-markdown';
 
 import Layout from '../layouts';
