@@ -1,13 +1,13 @@
 hello! This is an experimental react static site generator using Parcel and @reach/router! Putting together better tooling can make for a very fast and more accessible static site generator!
 
-![routing](https://user-images.githubusercontent.com/35976578/42131568-d1ec8eba-7cd2-11e8-973a-e556a44c061e.gif)
+![blog](https://user-images.githubusercontent.com/35976578/42151286-7cd6eb5e-7daa-11e8-91b1-1c4b30c157f5.gif)
 
 # Try it out
 
 1.  `git clone https://github.com/sw-yx/boring-SSG.git`
 2.  `cd boring-SSG`
 3.  `yarn` (or `npm install`)
-4.  `yarn start`, this should build your pages into the `/dist` folder.
+4.  `yarn start`, this should build your pages into the `/dist` folder and serve from there.
 
 Things to notice:
 
@@ -72,9 +72,11 @@ Routing is done by [simulating the route](https://reach.tech/router/server-rende
 # Todo
 
 - [ ] Work out CSS/multiple asset bundling
+- [x] basic data injection model (big ball of data)
 - [ ] Demonstrate split data injection model (may require creating addtional library level components)
-- [ ] Test production build
+- [x] Test production build
 - [ ] Inline css
+- [ ] NetlifyCMS integration
 
 # Prototype Goal
 
