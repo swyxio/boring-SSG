@@ -24,17 +24,9 @@ Things to notice:
 
 # Deploy on Netlify with NetlifyCMS
 
-Assuming you have a [Netlify](https://netlify.com) account linked up to your Github/Gitlab/Bitbucket:
+One click deploy on Netlify:
 
-1. Make sure this repo (or your fork of it) is pushed to your git host account
-2. Head to <https://app.netlify.com/account/sites> and click "New Site from Git"
-3. Under "Continuous Deployment" click your git host and look for the repo
-4. For "Deploy settings", the default settings are ok, but change "Publish directory" to "dist" instead of "build" and hit Deploy.
-5. While your site deploy is in progress, let's set up NetlifyCMS as well! Head to **Settings > Identity** and hit "Enable Identity"
-6. On the Identity page, scroll allllll the way down to **Services > Git Gateway** and hit "Enable Git Gateway"
-7. Last thing! Head to "Build & Deploy", scroll to **Post processing > Snippet injection** and hit "Add Snippet"
-8. Insert this script before </head>: <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> and name it whatever you want
-9. Your site should be deployed by now! head to **your-new-boring-ssg-subdomain.netlify.com/admin** to set up your NetlifyCMS admin panel for your new static site!
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/sw-yx/boring-SSG&stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 ---
 
