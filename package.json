@@ -40,7 +40,8 @@
     "doSSG": "npm run clearcache && NODE_ENV=development babel-node ./Boring/index.js ",
     "build": "npm run clearcache && NODE_ENV=production babel-node ./Boring/index.js ",
     "clearcache": "rimraf dist",
-    "serve": "nodemon server --ignore dist/"
+    "serve": "nodemon server --ignore dist/",
+    "netlifyify": "git checkout netlify && git merge master && git push origin netlify && git checkout master"
   },
   "repository": {
     "type": "git",
