@@ -9,6 +9,7 @@ import Products from './templates/product-page';
 // import Blog from './pages/Blog';
 import Oops from './pages/404';
 
+import 'bulma/css/bulma.css'
 import './app.css';
 
 const about = {

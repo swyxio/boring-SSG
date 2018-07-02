@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import Navbar from '../components/Navbar';
-import './all.sass'; // todo: add back later
+// import './all.sass'; // todo: add back later
 
 const TemplateWrapper = ({ children }) => (
   <div>
