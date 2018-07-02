@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: test post please ignore
+title: We Shall Fight
 date: '2018-07-02T04:34:10-04:00'
 description: this is a test post
 tags:

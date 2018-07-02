@@ -14,7 +14,7 @@ const Navbar = () => (
         <Link to="/" className="navbar-item">
           <figure className="image">
             {/* <img src={logo} alt="Kaldi" style={{ width: '88px' }} /> */}
-            <Logo style={{width: '88px'}}/>
+            <Logo style={{ width: '88px' }} />
           </figure>
           {/* Kaldi */}
         </Link>
@@ -30,7 +30,7 @@ const Navbar = () => (
       <div className="navbar-end">
         <a
           className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
+          href="https://github.com/sw-yx/boring-ssg"
           target="_blank"
           rel="noopener noreferrer"
         >
