@@ -1,3 +1,9 @@
+# Boring SSG
+
+> Static Site Generation So Good, It's Boring
+
+**Demo**: <https://boring-ssg.netlify.com>
+
 hello! This is an experimental react static site generator using Parcel and @reach/router! Putting together better tooling can make for a very fast and more accessible static site generator!
 
 ![blog](https://user-images.githubusercontent.com/35976578/42151286-7cd6eb5e-7daa-11e8-91b1-1c4b30c157f5.gif)

@@ -16,7 +16,7 @@ const App = ({ data }) => {
     data = window.BigBall; // TODO: i know this is so ugly. would love to refactor.
     console.log('fromwindow', { data });
   }
-
+  if (!data) return <Oops /> // no data, show an oops
   return (
     <Router>
       <IndexPage path="/" posts={data.posts} />
