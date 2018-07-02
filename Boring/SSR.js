@@ -10,7 +10,7 @@ export async function SSR(path, BigBall) {
   // if (process.env.NODE_ENV === 'development') {
   assets = {
     'main.js': '/BoringShell.js',
-    'main.css': '',
+    'main.css': '/BoringShell.css',
     BigBall
   };
   // someday maybe do something different for prod

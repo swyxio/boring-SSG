@@ -21,7 +21,7 @@ const write = filepath => data => console.log(`writing to ${filepath}`) || fs.ou
   // bundle things
   const bundleresult = await Bundle();
   var util = require('util');
-  write(NodePath.join(DIR, '/bundleresult.json'))(util.inspect(bundleresult));
+  write(NodePath.join(DIR, '/bundleresult.json'))(util.inspect(bundleresult)); // just for development
 
   // get big ball of data
   const BigBall = await config.getData();
