@@ -3,17 +3,7 @@ import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
 import Pricing from '../components/Pricing';
 
-export const ProductPage = ({
-  image,
-  title,
-  heading,
-  description,
-  intro = {},
-  main,
-  testimonials,
-  fullImage,
-  pricing
-}) =>
+export const ProductPage = ({ image, title, heading, description, intro, main, testimonials, fullImage, pricing }) =>
   !main ? (
     <div> null </div>
   ) : (

@@ -28,8 +28,8 @@ const App = ({ data }) => {
     <Layout>
       <Router>
         <IndexPage path="/" posts={data.posts} />
-        <About path="/about" post={about} />
-        <Products path="/products" post={about} />
+        <About path="/about" {...data.about[0]} />
+        <Products path="/products" {...data.products[0].data} />
         {/* <Blog path="/blog" /> */}
         <Oops default />
       </Router>
