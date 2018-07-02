@@ -5,7 +5,9 @@ import Chrome from './Chrome';
 import App from '../src';
 
 export default function BoringShell(props) {
-  const { title, assets = {}, children } = props;
+  const { title, assets = {
+    'main.js': '/BoringShell.js',
+    'main.css': '/BoringShell.css',}, children } = props;
   return (
     <Chrome title={title} assets={assets}>
       <App data={assets.BigBall}>{children}</App>

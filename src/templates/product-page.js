@@ -3,10 +3,9 @@ import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
 import Pricing from '../components/Pricing';
 
-export const ProductPage = ({ image, title, heading, description, intro, main, testimonials, fullImage, pricing }) =>
-  !main ? (
-    <div> null </div>
-  ) : (
+import Layout from '../layouts';
+export const ProductPage = ({ image, title, heading, description, intro, main, testimonials, fullImage, pricing }) => (
+  <Layout>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -71,6 +70,7 @@ export const ProductPage = ({ image, title, heading, description, intro, main, t
         </div>
       </div>
     </section>
-  );
+  </Layout>
+);
 
 export default ProductPage;
