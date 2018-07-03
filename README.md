@@ -101,7 +101,7 @@ CSS is another tricky bit. The gold standard (eg Gatsby) would inline CSS automa
 - [ ] Demonstrate split data injection model (may require creating addtional library level components)
 - [x] Test production build
 - [ ] Inline css to every page.
-- [ ] NetlifyCMS integration
+- [x] NetlifyCMS integration
 
 # Prototype Goal
 
