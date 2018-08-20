@@ -26,7 +26,7 @@ export default class IndexPage extends React.Component {
                   {data.description}
                   <br />
                   <br />
-                  <Link className="button is-small" to={data.slug}>
+                  <Link className="button is-small" to={'blog/' + data.slug}>
                     Keep Reading →
                   </Link>
                 </p>
